@@ -1,0 +1,12 @@
+name: MoreExplosiveWindCharges
+version: '1.0.0'
+main: net.sivils.moreExplosiveWindCharges.MoreExplosiveWindCharges
+api-version: '1.21'
+author: DuneSciFye
+commands:
+  windcharge:
+    permission: windcharge.reload
+permissions:
+  windcharge.reload:
+    description: Reload MoreExplosiveWindCharges Config
+    default: op
