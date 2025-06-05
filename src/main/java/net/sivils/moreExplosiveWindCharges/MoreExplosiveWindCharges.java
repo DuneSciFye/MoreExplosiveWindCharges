@@ -32,7 +32,8 @@ public final class MoreExplosiveWindCharges extends JavaPlugin implements Listen
 
         Collection<LivingEntity> entities = e.getEntity().getLocation().getNearbyLivingEntities(getConfig().getDouble("Radius", 1.0));
         for (LivingEntity entity : entities) {
-            Vector direction = entity.getLocation().toVector().subtract(windCharge.getLocation().toVector()).normalize();
+            Vector direction =
+              entity.getLocation().toVector().subtract(windCharge.getLocation().subtract(0, 0.1, 0).toVector()).normalize();
             double knockbackStrength = getConfig().getDouble("ExplosionMult", 0.5);
             Vector knockback = direction.multiply(knockbackStrength);
 
